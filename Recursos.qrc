@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Recursos/disco-flexible.png</file>
+        <file>Recursos/iconfinder_calculator-math-tool-school_2824440.png</file>
+    </qresource>
+</RCC>

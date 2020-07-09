@@ -20,7 +20,7 @@ public:
 
 public slots:
     void Calcular();
-  //  void guardar();
+   void guardar();
 
 private:
     Ui::Principal *ui;

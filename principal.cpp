@@ -15,6 +15,7 @@ Principal::Principal(QWidget *parent)
     QStringList cabecera= {"Marca","Modelo","Num Serie","Tipo","Contador","Precio"};
     ui->outResumen->setColumnCount(6);
     ui->outResumen->setHorizontalHeaderLabels(cabecera);
+
 }
 
 Principal::~Principal()
@@ -54,6 +55,7 @@ void Principal::Calcular()
     qDebug()<<contadorImpresiones;
     QString precio= ui->inPrecio->text();
     float pre=precio.toInt();
+
     int posicion=ui->outResumen->rowCount();
     ui->outResumen->insertRow(posicion);
     ui->outResumen->setItem(posicion,0,new QTableWidgetItem(marca));
@@ -64,8 +66,25 @@ void Principal::Calcular()
     ui->outResumen->setItem(posicion,5,new QTableWidgetItem(precio));
 
     precioTotal(pre);
- // ui->outResumen.tex
+
 
 }
 
-//INGRESAR
+void Principal::guardar()
+{
+
+    QString filename=QFileDialog::getSaveFileName(this,
+    "Guardar datos",QDir::home().absolutePath(),"Archivo de texto (*.csv)");
+
+    QFile data (filename);
+
+
+    if(data.open(QFile::WriteOnly|QFile::Truncate)){
+        QTextStream salida(&data);
+      //  salida<<ui->outResumen->item(1,1);
+        ui->statusbar->showMessage("Datos almacenados en "+filename,5000);
+
+    }
+    data.close();
+}
+

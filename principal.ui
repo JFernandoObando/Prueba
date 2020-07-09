@@ -7,11 +7,15 @@
     <x>0</x>
     <y>0</y>
     <width>635</width>
-    <height>379</height>
+    <height>428</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Principal</string>
+   <string>Prueba Juan_Obando</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="Recursos.qrc">
+    <normaloff>:/Recursos/iconfinder_calculator-math-tool-school_2824440.png</normaloff>:/Recursos/iconfinder_calculator-math-tool-school_2824440.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -75,7 +79,10 @@
           <item row="4" column="4" colspan="2">
            <widget class="QSpinBox" name="inContador">
             <property name="maximum">
-             <number>999999999</number>
+             <number>999999</number>
+            </property>
+            <property name="stepType">
+             <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
             </property>
            </widget>
           </item>
@@ -120,7 +127,7 @@
        <item>
         <widget class="QPushButton" name="OkpushButton">
          <property name="text">
-          <string>OK</string>
+          <string>Insertar</string>
          </property>
         </widget>
        </item>
@@ -145,7 +152,7 @@
             <property name="font">
              <font>
               <family>Showcard Gothic</family>
-              <pointsize>10</pointsize>
+              <pointsize>15</pointsize>
              </font>
             </property>
             <property name="text">
@@ -157,15 +164,15 @@
            <widget class="QLabel" name="outTotal">
             <property name="font">
              <font>
-              <family>Open Sans Semibold</family>
-              <pointsize>16</pointsize>
+              <family>Palatino Linotype</family>
+              <pointsize>20</pointsize>
               <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">color: rgb(170, 0, 0);
-background-color: rgb(255, 255, 0);</string>
+             <string notr="true">color: rgb(236, 0, 0);
+</string>
             </property>
             <property name="text">
              <string>0.0</string>
@@ -180,8 +187,19 @@ background-color: rgb(255, 255, 0);</string>
     </item>
     <item>
      <widget class="QLabel" name="label_7">
+      <property name="font">
+       <font>
+        <underline>true</underline>
+       </font>
+      </property>
       <property name="text">
-       <string/>
+       <string>https://github.com/JFernandoObando/Prueba</string>
+      </property>
+      <property name="openExternalLinks">
+       <bool>true</bool>
+      </property>
+      <property name="buddy">
+       <cstring>https://github.com/JFernandoObando/Prueba</cstring>
       </property>
      </widget>
     </item>
@@ -206,11 +224,17 @@ background-color: rgb(255, 255, 0);</string>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionGuardar">
+   <property name="icon">
+    <iconset resource="Recursos.qrc">
+     <normaloff>:/Recursos/disco-flexible.png</normaloff>:/Recursos/disco-flexible.png</iconset>
+   </property>
    <property name="text">
     <string>Guardar</string>
    </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="Recursos.qrc"/>
+ </resources>
  <connections/>
 </ui>
